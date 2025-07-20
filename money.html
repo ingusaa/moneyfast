@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Minimalist Image Display</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS for subtle animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        .image-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .image-hover:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+        
+        body {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black min-h-screen flex flex-col items-center p-4">
+    <div class="max-w-4xl w-full fade-in mt-8">
+        <div class="relative group">
+            <img 
+                src="https://lh3.googleusercontent.com/MT9yR2JIHzsaXhho-ksgWEawJyBX1dQ0fzm1wt-cJc21fFv37yQ0tDNFoXfp8hIdDo-vlYYHCH3WOtHI_TnjtAf5jUL5zzC_M5gyR3FQxdTaI94g21ffDcfsmgetMjkcLL6c8vr308O__FOriz5Ud06cwDDv-pOHJ1yTrx6O7gjsoaepr1g=w1280" 
+                alt="Featured Artwork"
+                class="w-full h-auto image-hover mx-auto"
+            >
+            <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-all duration-500 rounded-lg"></div>
+        </div>
+        <div class="mt-8 text-center">
+            <h2 class="text-red-600 text-5xl font-bold mb-6">TRAINING:</h2>
+            <p class="text-gray-300 text-2xl mb-8 leading-relaxed">You will receive a wide variety of professional training that will help you achieve your goals.</p>
+            <div class="border border-white rounded-lg p-6 max-w-3xl mx-auto">
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Video Editing</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Reselling Physical Products</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Paid Communities</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Clothing Brand</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Instagram Theme Pages</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Digital Services Agency</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Crypto Trading</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Dropshipping</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Forex Trading</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Artificial Intelligence (AI)</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Graphic Design</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Promoter</p>
+                    </div>
+                    <div class="space-y-4">
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Affiliate Marketing</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Reselling Private Content</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Creating and Monetizing Content</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Freelancing</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Copying and Recreating Content</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Investing in Crypto</p>
+                        <p class="text-white font-bold text-xl uppercase tracking-wider">- Investing in Stocks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-4xl w-full fade-in mt-12 mb-12">
+        <div class="relative group">
+            <iframe 
+                src="https://streamable.com/e/vhww6x" 
+                frameborder="0" 
+                allowfullscreen
+                class="w-full h-96 mx-auto image-hover"
+            ></iframe>
+            <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-0 transition-all duration-500 rounded-lg"></div>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to enhance the experience
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add a subtle effect when the image is clicked
+            const image = document.querySelector('img');
+            image.addEventListener('click', () => {
+                image.classList.add('animate-pulse');
+                setTimeout(() => {
+                    image.classList.remove('animate-pulse');
+                }, 1000);
+            });
+            
+        });
+    </script>
+</body>
+</html>
